@@ -1,0 +1,23 @@
+{
+  "name": "openapi-codegen-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc --noEmit",
+    "codegen:typescript-fetch": "openapi-generator-cli generate -i ./openapi.yaml -g typescript-fetch -o ./src/__generated__/typescript-fetch",
+    "codegen:typescript-axios": "openapi-generator-cli generate -i ./openapi.yaml -g typescript-fetch -o ./src/__generated__/typescript-axios",
+    "codegen:openapi-typescript": "openapi-typescript ./openapi.yaml -o ./src/__generated__/openapi-typescript/schema.d.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openapitools/openapi-generator-cli": "2.13.4",
+    "openapi-typescript": "6.7.5",
+    "typescript": "5.4.5"
+  },
+  "dependencies": {
+    "axois": "0.0.1-security",
+    "openapi-fetch": "0.9.3"
+  }
+}
